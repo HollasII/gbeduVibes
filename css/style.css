@@ -36,10 +36,10 @@ header nav a {
 }
 header nav a:hover {
   cursor: pointer;
-  border-bottom: 1px solid #A52A2A;
+  border-bottom: 2px solid #A52A2A;
 }
 header nav h3:hover {
-  border-bottom: 1px solid #A52A2A;
+  border-bottom: 2px solid #A52A2A;
 }
 
 main {
@@ -74,4 +74,34 @@ main section button a {
 main section button:hover {
   background-color: #A52A2A;
   box-shadow: 5px 5px #1DB954;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100vw;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    margin-top: 5vh;
+    display: block;
+    background-image: url(img/Group\ 7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+  }
+  main section {
+    width: 100%;
+  }
+  main section h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+  }
+  main section button {
+    width: 100%;
+  }
+  main img {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,72 @@
+@import 'mixin';
+@import 'variable';
+
+@include shared;
+
+.team
+{
+    padding: 5vh 5vw;
+
+    section
+    {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15vh;
+
+        .content
+        {
+            flex-basis: 40%;
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+        }
+        .info
+        {
+            @include displays;
+            gap: 1vh;
+            margin-right: 4%;
+            h5
+            {
+                color: map-get($map: $paint, $key:teamCol );
+            }
+
+            span
+            {
+                margin: 0 0.5vw;
+            }
+        }
+
+        .para
+        {
+            flex-basis: 70%;
+
+            p
+            {
+                border-left: 1px solid #000;
+                padding-left: 10%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .hollas-body
+    {
+        .content
+        {
+            .minato
+            {
+                width: 96px;
+                height: 96px;
+            }
+            img
+            {
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+@include shared-queries;
+@include team-queries;

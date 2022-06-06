@@ -1,68 +1,10 @@
 // @import 'main';
 @import 'mixin';
 @import 'variable';
+// @import 'ourTeam';
 // @include queries;
 
-
-
-*
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body{
-    height: 100vh;
-    background-image: url(../images/Vector-4.png), url(../images/Vector-5.png);
-    background-repeat: no-repeat;
-    background-position: top center, right bottom;
-    display: flex;
-    flex-direction: column;
-    font-family: $font;
-}
-header
-{
-    display: flex;
-    flex-direction: column;
-    height: 15vh;
-
-    nav
-    {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        vertical-align: middle;
-        padding: 5vh 3vw;
-        
-
-        .logo
-        {
-            display: flex;
-            align-items: center;
-        }
-
-        a
-        {
-            text-decoration: none;
-            color: map-get($paint,head);
-
-            &:hover
-            {
-                cursor: pointer;
-                border-bottom: $borbot;
-            }
-        }
-
-        h3
-        {
-            &:hover
-            {
-                border-bottom: $borbot;
-            }
-        }
-    }
-}
-
+@include shared;
 main
 {
     display: flex;
@@ -110,66 +52,5 @@ main
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @media (max-width:600px){
-//     body{
-//         width: 100vw;
-//     }
-    
-// }
+@include shared-queries;
+@include land-queries;

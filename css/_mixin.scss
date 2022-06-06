@@ -1,9 +1,83 @@
-@mixin queries {
-    @media (max-width:600px){
-        body{
+@import 'variable';
+
+@mixin displays {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin shared {
+    *
+    {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        height: 100vh;
+        background-image: url(../images/Vector-4.png), url(../images/Vector-5.png);
+        background-repeat: no-repeat;
+        background-position: top center, right bottom;
+        @include displays();
+        font-family: $font;
+    }
+    header
+    {
+        @include displays();
+        height: 15vh;
+
+        nav
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            vertical-align: middle;
+            padding: 5vh 3vw;
+            
+
+            .logo
+            {
+                display: flex;
+                align-items: center;
+            }
+
+            a
+            {
+                text-decoration: none;
+                color: map-get($paint,head);
+
+                &:hover
+                {
+                    cursor: pointer;
+                    border-bottom: $borbot;
+                }
+            }
+
+            h3
+            {
+                &:hover
+                {
+                    border-bottom: $borbot;
+                }
+            }
+        }
+    }
+}
+
+@mixin shared-queries
+{
+    @media (max-width:600px)
+    {
+        body
+        {
             width: 100vw;
         }
+    }    
+}
 
+@mixin land-queries 
+{
+    @media (max-width:600px)
+    {
         main{
             margin-top: 5vh;
             display: block;
@@ -28,6 +102,49 @@
 
             img{
                 display: none;
+            }
+        }
+    }
+}
+
+@mixin team-queries
+{
+    @media (max-width:600px){
+        body{
+            height: 100%;
+        }
+        section{
+            flex-direction: column;
+
+            .content
+            {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .info
+                {
+                    h5
+                    {
+                        text-align: center;
+                    }
+
+                    div
+                    {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                .para
+                {
+                    p
+                    {
+                        padding: 0;
+                        border: 0;
+                        text-align: center;
+                    }
+                }
             }
         }
     }
