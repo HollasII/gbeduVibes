@@ -1,0 +1,32 @@
+// *
+// {
+//     box-sizing: border-box;
+//     margin: 0;
+//     font-family: $font;
+// }
+// main{
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 10vh;
+// }
+// section{
+//     flex-basis: 30%;
+
+//     h1{
+//         font-size: 3rem;
+//     }
+
+//     span{
+//         color: map-get($paint, head);
+//     }
+
+//     button{
+//         margin-top: 5vh;
+//         padding: 2vh 3vw;
+//         border: none;
+//         border-radius: 25px;
+//         background-color: map-get($paint, main);
+//         color: map-get($paint, mainCol);
+//         letter-spacing: 0.1em;
+//     }
+// }

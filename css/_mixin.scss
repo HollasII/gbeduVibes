@@ -3,6 +3,32 @@
         body{
             width: 100vw;
         }
-        
+
+        main{
+            margin-top: 5vh;
+            display: block;
+            background-image: url(img/Group\ 7.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+
+            section{
+                width: 100%;
+
+                h1{
+                    text-align: center;
+                    font-size:2em;
+                    font-weight: bolder;
+                }
+
+                button{
+                    width: 100%;
+                }
+            }
+
+            img{
+                display: none;
+            }
+        }
     }
 }

@@ -1,1 +1,175 @@
-@import 'shared';
+// @import 'main';
+@import 'mixin';
+@import 'variable';
+// @include queries;
+
+
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background-image: url(../images/Vector-4.png), url(../images/Vector-5.png);
+    background-repeat: no-repeat;
+    background-position: top center, right bottom;
+    display: flex;
+    flex-direction: column;
+    font-family: $font;
+}
+header
+{
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+
+    nav
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        vertical-align: middle;
+        padding: 5vh 3vw;
+        
+
+        .logo
+        {
+            display: flex;
+            align-items: center;
+        }
+
+        a
+        {
+            text-decoration: none;
+            color: map-get($paint,head);
+
+            &:hover
+            {
+                cursor: pointer;
+                border-bottom: $borbot;
+            }
+        }
+
+        h3
+        {
+            &:hover
+            {
+                border-bottom: $borbot;
+            }
+        }
+    }
+}
+
+main
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10vh;
+    
+    section
+    {
+        flex-basis: 30%;
+
+        h1
+        {
+            font-size: 3rem;
+
+            span
+            {
+                color: map-get($paint, head);
+            }
+        }
+
+        button
+        {
+            margin-top: 5vh;
+            padding: 2vh 3vw;
+            border: none;
+            border-radius: 25px;
+            background-color: map-get($paint, main);
+            color: map-get($paint, mainCol);
+            letter-spacing: 0.1em;
+            cursor: pointer;
+
+            a
+            {
+                text-decoration: none;
+                font-size: 1.2rem;
+                color: map-get($paint, mainCol);
+            }
+
+            &:hover
+            {
+                background-color: map-get($map: $paint , $key:head );
+                box-shadow: 5px 5px map-get($map: $paint, $key:main );
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @media (max-width:600px){
+//     body{
+//         width: 100vw;
+//     }
+    
+// }
