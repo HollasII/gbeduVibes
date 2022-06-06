@@ -1,8 +1,12 @@
+@import 'mixin';
+@import 'variable';
+
 *
 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: $font;
 }
 body{
     height: 100vh;
@@ -10,3 +14,36 @@ body{
     background-repeat: no-repeat;
     background-position: top center, right bottom;
 }
+header
+{
+    height: 15vh;
+    display: flex;
+    padding: 5vh 3vw;
+    justify-content: space-between;
+    align-items: center;
+    color: map-get($paint, head);
+
+    a
+    {
+        text-decoration: none;
+        color: map-get($paint, head);
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+
+    h3
+    {
+        a
+        {
+            &:hover{
+                border-bottom:1px solid map-get($paint, head);
+            }
+        }
+    }
+}
+
+
+
