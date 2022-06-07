@@ -1,1 +1,275 @@
-/*# sourceMappingURL=spotify.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url(../images/Vector-4.png), url(../images/Vector-5.png);
+  background-repeat: no-repeat;
+  background-position: top center, right bottom;
+  display: flex;
+  flex-direction: column;
+  font-family: "Hind" sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: middle;
+  padding: 5vh 3vw;
+}
+header nav .logo {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: #A52A2A;
+}
+header nav a:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #A52A2A;
+}
+header nav h3:hover {
+  border-bottom: 3px solid #A52A2A;
+}
+
+main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main .container .section-top {
+  position: relative;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container .section-top .top-slide .img1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  -webkit-animation: slide1 3s ease-in 1 normal backwards;
+          animation: slide1 3s ease-in 1 normal backwards;
+}
+main .container .section-top .top-slide .img2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: slide 4s ease-in 3s 1 normal backwards;
+          animation: slide 4s ease-in 3s 1 normal backwards;
+}
+main .container .section-top .top-slide .img3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: slide 4s ease-in 7s 1 normal backwards;
+          animation: slide 4s ease-in 7s 1 normal backwards;
+}
+main .container .section-top .final-top {
+  position: absolute;
+  top: 0;
+  display: flex;
+  gap: 2vw;
+  opacity: 0;
+  -webkit-animation: final 3s ease-in 12s 1 normal forwards;
+          animation: final 3s ease-in 12s 1 normal forwards;
+}
+main .container .section-top .final-top img:hover {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transition-property: border;
+  border-radius: 16px;
+  border: 3px solid #1DB954;
+}
+main .container .connecting {
+  color: #1DB954;
+  -webkit-animation: done 1s ease-out 12s 1 normal forwards;
+          animation: done 1s ease-out 12s 1 normal forwards;
+}
+main .container .connecting .ball-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 1vw;
+}
+main .container .connecting .ball-slide span {
+  width: 5%;
+  height: 40%;
+  background-color: #9BADA2;
+  border-radius: 50%;
+}
+main .container .connecting .ball-slide .ball1 {
+  -webkit-animation: ball 3s ease-in 1 normal forwards;
+          animation: ball 3s ease-in 1 normal forwards;
+}
+main .container .connecting .ball-slide .ball2 {
+  -webkit-animation: ball 4s ease-in 3s 1 normal forwards;
+          animation: ball 4s ease-in 3s 1 normal forwards;
+}
+main .container .connecting .ball-slide .ball3 {
+  -webkit-animation: ball 4s ease-in 7s 1 normal forwards;
+          animation: ball 4s ease-in 7s 1 normal forwards;
+}
+
+@-webkit-keyframes slide1 {
+  0% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+@keyframes slide1 {
+  0% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  50% {
+    opacity: 1;
+    transition-duration: 1s;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+    transition-duration: 1s;
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  50% {
+    opacity: 1;
+    transition-duration: 1s;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+    transition-duration: 1s;
+  }
+}
+@-webkit-keyframes final {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes final {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ball {
+  0% {
+    background-color: #9BADA2;
+  }
+  50% {
+    background-color: #1DB954;
+    box-shadow: 0 0 3px #1DB954;
+    transition-duration: 2s;
+    transform: scale(1.2);
+  }
+  100% {
+    background-color: #9BADA2;
+    transform: scale(0.5);
+    transition-duration: 1s;
+  }
+}
+@keyframes ball {
+  0% {
+    background-color: #9BADA2;
+  }
+  50% {
+    background-color: #1DB954;
+    box-shadow: 0 0 3px #1DB954;
+    transition-duration: 2s;
+    transform: scale(1.2);
+  }
+  100% {
+    background-color: #9BADA2;
+    transform: scale(0.5);
+    transition-duration: 1s;
+  }
+}
+@-webkit-keyframes done {
+  to {
+    opacity: 0;
+    transition-duration: 2s;
+  }
+}
+@keyframes done {
+  to {
+    opacity: 0;
+    transition-duration: 2s;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
+
+  .final-img {
+    flex-direction: column;
+  }
+
+  .ball-slider {
+    gap: 3vw;
+  }
+}/*# sourceMappingURL=spotify.css.map */

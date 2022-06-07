@@ -1,8 +1,171 @@
 @import 'variable';
 
-@mixin displays {
+@mixin displays 
+{
     display: flex;
     flex-direction: column;
+}
+@mixin spotDisplay 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin spotImg {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin topSlide {
+    .top-slide
+    {
+        .img1
+        {
+            @include spotImg;
+            opacity: 0;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: slide1 3s ease-in 1 normal backwards;
+        }
+
+        .img2
+        {
+            @include spotImg;
+            opacity: 0;
+            animation: slide 4s ease-in 3s 1 normal backwards;
+        }
+
+        .img3
+        {
+            @include spotImg;
+            opacity: 0;
+            animation: slide 4s ease-in 7s 1 normal backwards;
+        }
+    }
+}
+
+@mixin finalTop {
+    .final-top
+    {
+        position: absolute;
+        top: 0;
+        display: flex;
+        gap: 2vw;
+        opacity: 0;
+        animation: final 3s ease-in 12s 1 normal forwards;
+
+        img
+        {
+            &:hover
+            {
+                transition-duration: 0.2s;
+                transition-timing-function: ease-in;
+                transition-property: border;
+                border-radius: 16px;
+                border: 3px solid map-get($map: $paint, $key:main );
+            }
+        }
+    }
+}
+
+@mixin baller {
+
+    span{
+        width: 5%;
+        height:40%;
+        background-color: map-get($map: $paint, $key:spotSpan );
+        border-radius: 50%;
+    }
+    .ball1{
+        animation: ball 3s ease-in 1 normal forwards;
+    }
+    .ball2{
+        animation: ball 4s ease-in 3s 1 normal forwards;
+    }
+    .ball3{
+        animation: ball 4s ease-in 7s 1 normal forwards;
+    }
+}
+
+@mixin frame {
+    @keyframes slide1{
+        0%{
+            opacity: 1;
+            transform: translateX(-20px);
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            transform: translateX(20px);
+        }
+    }
+
+    @keyframes slide{
+        0%{
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        50%{
+            opacity: 1;
+            transition-duration: 1s;
+        }
+        100%{
+            opacity: 0;
+            transform: translateX(20px);
+            transition-duration: 1s;
+    
+        }
+    }    
+    @keyframes final{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        
+    }
+
+    @keyframes ball{
+        0%{
+            background-color: map-get($map: $paint, $key:spotSpan );
+        }
+        50%{
+            background-color: map-get($map: $paint, $key:spot );
+            box-shadow:0 0 3px map-get($map: $paint, $key:spot );
+            transition-duration: 2s;
+            transform: scale(1.2);
+        }
+        100%{
+            background-color: map-get($map: $paint, $key:spotSpan );
+            transform: scale(0.5);
+            transition-duration: 1s;
+
+        }
+        
+    }
+    @keyframes done{
+        to{
+            opacity: 0;
+            transition-duration: 2s;
+        }
+    }
+    @media (max-width:600px){
+        body{
+            height: 100vh;
+        }
+        .final-img{
+            flex-direction: column;
+        }   
+        .ball-slider{
+            gap: 3vw;
+        }    
+    }
 }
 
 @mixin shared {

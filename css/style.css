@@ -36,10 +36,10 @@ header nav a {
 }
 header nav a:hover {
   cursor: pointer;
-  border-bottom: 2px solid #A52A2A;
+  border-bottom: 3px solid #A52A2A;
 }
 header nav h3:hover {
-  border-bottom: 2px solid #A52A2A;
+  border-bottom: 3px solid #A52A2A;
 }
 
 main {

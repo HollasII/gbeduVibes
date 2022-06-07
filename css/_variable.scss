@@ -1,3 +1,3 @@
 $font: 'Hind' sans-serif;
-$paint: (head:#A52A2A, main: #1DB954, mainCol: #ffffff, teamCol: rgba(0,0,0,0.5));
-$borbot: 2px solid map-get($paint,head);
+$paint: (head:#A52A2A, main: #1DB954, mainCol: #ffffff, teamCol: rgba(0,0,0,0.5), spot:#1DB954, spotSpan:#9BADA2);
+$borbot: 3px solid map-get($paint,head);
